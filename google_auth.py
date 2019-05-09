@@ -23,7 +23,7 @@ pprint(spreadsheet)
 driveService = discovery.build('drive', 'v3', credentials=credentials)
 shareRes = driveService.permissions().create(
     fileId=spreadsheet['spreadsheetId'],
-    body={'type': 'user', 'role': 'writer', 'emailAddress': 'dimitrionian123@gmail.com'},  # доступ на чтение кому угодно
+    body={'type': 'user', 'role': 'writer', 'emailAddress': 'dimitrionian123@gmail.com'},
     fields='id'
 ).execute()
 
