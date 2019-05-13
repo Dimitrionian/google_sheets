@@ -2,14 +2,6 @@ from googleapiclient.http import MediaFileUpload
 
 
 class GoogleDriveAbstraction:
-    def set_permissions(self, sheet_id, drive_service):
-
-        drive_service.permissions().create(
-            fileId=sheet_id,
-            body={'type': 'user', 'role': 'writer', 'emailAddress': 'dimitrionian123@gmail.com'},
-            fields='id'
-        ).execute()
-        return drive_service
 
     def file_upload(self, drive_service, FOLDER_ID):
         file_metadata = {
